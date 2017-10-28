@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="UTF-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- HELLO TO WORLD -->
+      <style>
+				html {
+				  height: 100%;
+				}
+
+				body {
+				  min-height: 100%;
+				  display: flex;
+				  flex-direction: column;
+				}
+
+				section {
+				  flex: 1 0 auto;
+				}
+
+				body {
+				  font: 16px/1.5 sans-serif;
+				  margin: 0;
+				}
+				section {
+				  padding: 4em;
+				  color: grey;
+				}
+				section {
+				  background-color: #F5F5F5;
+				}
+				footer {
+					background-color: #aca4a0;
+					text-align: center;
+				}
+	      /*
+					HEADER NAVBAR STYLE
+	      */
+				ul.topnav {
+				  list-style-type: none;
+				  margin: 0;
+				  padding: 0;
+				  overflow: hidden;
+					
+					position: fixed;
+			    height: 45px;
+			    width: 100%;
+			    top: 0;
+			    left: 0;
+
+					border-bottom: 1px solid #a4c1c1;
+				  background-color: #d1e0e0; /*#333*/
+				}
+
+				ul.topnav li {float: left;}
+
+				ul.topnav li a {
+				  display: block;
+				  color: #3e5b5b;
+				  text-align: center;
+				  padding: 14px 16px;
+				  text-decoration: none;
+				}
+
+				ul.topnav li a:hover:not(.active) {font-weight: bold;}
+
+				ul.topnav li a.active {background-color: #b3cbcb;}
+				/**/
+				.logo{
+					margin:40px;
+				}
+      </style>
+    </head>
+    {% load static %}
+    <body class="Site">
+			<header> 
+				<ul class="topnav">
+				  <li><a class="active" href="/">Home</a></li>
+				  <li><a href="/projects/">Projects</a></li>
+				  <li><a href="/contact/">Contact</a></li>
+				</ul>
+			</header>
+			<section>
+				{% block content %}{% endblock content %}
+			</section>
+			<footer>
+				<div class="footer_contents">
+					<!-- <br>Hello world this is the newscaster team stating the news today</br> -->
+			    <a href="https://www.linkedin.com/in/henry-co-093848100/">			      
+						<img class="logo" src="{% static "images/github.svg" %}" alt="My GitHub" height = "40" width = "40"/></a>
+			    <a href="https://www.linkedin.com/in/henry-co-093848100/">			    
+					<img class="logo" src="{% static "images/linkedin.svg" %}" alt="My LinkedIn" height = "40" width = "40"/></a>
+
+<!-- 					<img class="logo" src="{% static "images/gmail.svg" %}" 
+						alt="My Email"
+						height = "40"
+						width = "40"
+					/> -->
+
+
+					<br>
+					<br>
+					<sub>© Henry Co. All rights reserved.</sub>
+					
+				</div>
+			</footer>
+    </body>
+
+</html>

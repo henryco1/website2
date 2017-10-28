@@ -1,0 +1,220 @@
+{% extends 'base.html' %}
+{% load staticfiles}
+
+<!-- {% block title %}Login{% endblock %} -->
+
+{% block content %}
+<div id="container">
+
+
+	<div id="dummy"></div>
+</div>
+
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+<body bgcolor="#F7F4F3">
+<body link="blue">
+
+<style>
+a:link{color:black}
+a:visited{color:purple}
+
+html, body, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p, h3 {
+    padding: 1em 0 .5em 0;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 1368px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+#sidebar {
+	border-right: 1px solid #ddd;
+	padding-right:50px;
+	padding-left:50px;
+	/*position: fixed;*/
+}
+
+div.projectimg {
+    border: 1px solid #ccc;
+}
+
+div.projectimg img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    margin-right: 60px;
+}
+@media only screen and (max-width: 640px){
+    .responsive {
+      width: 100%;
+      margin: 6px 0;
+    }
+		#sidebar {
+			border: none;
+			padding-right:0px;
+			padding-left:0px;
+		}
+		section {
+			padding: 0em;
+			padding-top: 4em;
+		}
+}
+@media only screen and (max-width: 1366px){
+    .responsive {
+      width: 100%;
+      margin: 6px 0;
+    }
+		#sidebar {
+			border: none;
+			padding-right:20px;
+			padding-left:20px;
+		}
+		section {
+			padding: 0px;
+			padding-top: 4em;
+		}
+}
+
+/*			border-right: 0px solid #eee;*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+
+{% load static %}
+
+<div class="row">
+	<div class="col-3 menu">
+	  <div id="sidebar">
+	  <h1>Profile</h1>
+			<p>
+			Henry Co is a recent graduate of Seattle University who majored in Electrical Engineering 
+			with a Specialty in Computer Engineering. He focuses on software and hardware, with special
+			attention placed on IoT and embedded devices. He hopes to create technology that drives 
+			innovation in the world and makes it a better place. 
+			</p>
+
+			<p>
+			On a personal level, he has hobbies and interest in many other subjects, which include web
+			development, history, video games, and music. 
+			</p>
+	  </div>
+	</div>
+
+	<div class="col-9">
+	  <h1>Projects</h1>
+
+		<div class="summary"> 
+			<div class="responsive">
+			  <div class="projectimg">
+			    <a target="_blank" href="images/IoTSoundMeter1.jpg">
+			      <img src="{% static "images/IoTSoundMeter1.jpg" %}"/>
+			    </a>
+			    <div class="desc">
+						<h4>IoT Sound Level Meter</h4>
+						<p>
+						This proof of concept sound level meter monitors the length and intensity of sound 
+						waves the user is exposed to in a day. The data and measurements are uploaded a 
+						webpage using the ThingWorx platform, allowing the end user to make educated 
+						decisions about 
+						their aural health.
+						</p>
+			    </div>
+			  </div>
+			</div> 
+		</div>
+
+		<div class="summary"> 
+			<div class="responsive">
+			  <div class="projectimg">
+			    <a target="_blank" href="images/IoTSmartGarbage1.jpg">
+			      <img src="{% static "images/IoTSmartGarbage1.jpg" %}"/>
+			    </a>
+			    <div class="desc">
+						<h4>IoT Smart Garbage Container</h4>
+						<p>
+						This proof of concept sound level meter monitors the length and intensity of sound 
+						waves the user is exposed to in a day. The data and measurements are uploaded a 
+						webpage using the ThingWorx platform, allowing the end user to make educated 
+						decisions about 
+						their aural health.
+						</p>
+			    </div>
+			  </div>
+			</div> 
+		</div>
+
+		<div class="summary"> 
+			<div class="responsive">
+			  <div class="projectimg">
+			    <a target="_blank" href="images/LineFollowRobo.jpg">
+			      <img src="{% static "images/LineFollowRobo.jpg" %}"/>
+			    </a>
+			    <div class="desc">
+						<h4>IoT Sound Level Meter</h4>
+						<p>
+						This proof of concept sound level meter monitors the length and intensity of sound 
+						waves the user is exposed to in a day. The data and measurements are uploaded a 
+						webpage using the ThingWorx platform, allowing the end user to make educated 
+						decisions about 
+						their aural health.
+						</p>
+			    </div>
+			  </div>
+			</div> 
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>
+{% endblock %}
