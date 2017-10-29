@@ -19,117 +19,8 @@
 <body bgcolor="#F7F4F3">
 <body link="blue">
 
-<style>
-a:link{color:black}
-a:visited{color:purple}
-
-html, body, * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-p, h3 {
-    padding: 1em 0 .5em 0;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-}
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-}
-@media only screen and (min-width: 1368px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-}
-
-#sidebar {
-	border-right: 1px solid #ddd;
-	padding-right:50px;
-	padding-left:50px;
-	/*position: fixed;*/
-}
-
-div.projectimg {
-    border: 1px solid #ccc;
-}
-
-div.projectimg img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.responsive {
-    padding: 0 6px;
-    margin-right: 60px;
-}
-@media only screen and (max-width: 640px){
-    .responsive {
-      width: 100%;
-      margin: 6px 0;
-    }
-		#sidebar {
-			border: none;
-			padding-right:0px;
-			padding-left:0px;
-		}
-		section {
-			padding: 0em;
-			padding-top: 4em;
-		}
-}
-@media only screen and (max-width: 1366px){
-    .responsive {
-      width: 100%;
-      margin: 6px 0;
-    }
-		#sidebar {
-			border: none;
-			padding-right:20px;
-			padding-left:20px;
-		}
-		section {
-			padding: 0px;
-			padding-top: 4em;
-		}
-}
-
-/*			border-right: 0px solid #eee;*/
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-</style>
-
 {% load static %}
+<link rel="stylesheet" href="{% static 'css/homepageStyle.css' %}">
 
 <div class="row">
 	<div class="col-3 menu">
@@ -181,11 +72,10 @@ div.desc {
 			    <div class="desc">
 						<h4>IoT Smart Garbage Container</h4>
 						<p>
-						This proof of concept sound level meter monitors the length and intensity of sound 
-						waves the user is exposed to in a day. The data and measurements are uploaded a 
-						webpage using the ThingWorx platform, allowing the end user to make educated 
-						decisions about 
-						their aural health.
+						Using the ThingWorx platform, the IoT smart garbage container can notify the user 
+						which container the trash should go into. The garbage bin has a camera that can scan 
+						an item's bar code and match it to a database. The bin also has a sensor that measures 
+						the height of trash in a bin and notifies the user when it is full. 
 						</p>
 			    </div>
 			  </div>
@@ -199,13 +89,70 @@ div.desc {
 			      <img src="{% static "images/LineFollowRobo.jpg" %}"/>
 			    </a>
 			    <div class="desc">
-						<h4>IoT Sound Level Meter</h4>
+						<h4>Line Following Robot</h4>
 						<p>
-						This proof of concept sound level meter monitors the length and intensity of sound 
-						waves the user is exposed to in a day. The data and measurements are uploaded a 
-						webpage using the ThingWorx platform, allowing the end user to make educated 
-						decisions about 
-						their aural health.
+						For a few labs in my embedded systems class, I worked with a line following robot that
+						ran on a PIC32. This robot was able to follow a line of black tape on the floor using
+						optocouplers. I wrote C code and interrupts to control the behavior of the robot when
+						the black tape was detected.
+						</p>
+			    </div>
+			  </div>
+			</div> 
+		</div>
+
+		<div class="summary"> 
+			<div class="responsive">
+			  <div class="projectimg">
+			    <a target="_blank" href="images/AutoPuppetShow.jpg">
+			      <img src="{% static "images/AutoPuppetShow.jpg" %}"/>
+			    </a>
+			    <div class="desc">
+						<h4>Automated Puppet Project</h4>
+						<p>
+						This project used a Raspberry Pi, a breadboard circuit, four stepper motors, and encoders
+						to operate a controllable puppet. The user could enter parameters into a program that 
+						controlled which motors were used, the duty cycle of the motors, and the direction of the 
+						motor rotation. 
+						</p>
+			    </div>
+			  </div>
+			</div> 
+		</div>
+
+		<div class="summary"> 
+			<div class="responsive">
+			  <div class="projectimg">
+			    <a target="_blank" href="images/WinchSimulator.png">
+			      <img src="{% static "images/WinchSimulator.png" %}"/>
+			    </a>
+			    <div class="desc">
+						<h4>Winch Simulator</h4>
+						<p>
+						My senior design project involved creating a web application for the testing and development
+						of winches for Ingersoll Rand. The team had to create an updated application that was more 
+						accurate, user-friendly, and easily updatable. The program had a database that contained
+						information about winches and its attributes. Winch Simulator would also display data about
+						a winch performance curves based on parameters selected or customized by the user.
+						</p>
+			    </div>
+			  </div>
+			</div> 
+		</div>
+
+		<div class="summary"> 
+			<div class="responsive">
+			  <div class="projectimg">
+			    <a target="_blank" href="images/TemplateWriter.png">
+			      <img src="{% static "images/TemplateWriter.png" %}"/>
+			    </a>
+			    <div class="desc">
+						<h4>Template Writer</h4>
+						<p>
+						When I wrote emails for one of my projects, I typically structured the emails a certain
+						way. The format remained the same except for certain content that was personalized for a
+						particular audience. I realized that I could write these emails faster and more efficiently
+						if I created templates for certain blocks of text in each email.
 						</p>
 			    </div>
 			  </div>

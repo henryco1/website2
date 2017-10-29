@@ -1,0 +1,105 @@
+a:link{color:black}
+a:visited{color:purple}
+
+html, body, * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+p, h3 {
+    padding: 1em 0 .5em 0;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 1368px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+#sidebar {
+    border-right: 1px solid #ddd;
+    padding-right:50px;
+    padding-left:50px;
+    /*position: fixed;*/
+}
+
+div.projectimg {
+    border: 1px solid #ccc;
+}
+
+div.projectimg img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    margin-right: 60px;
+}
+@media only screen and (max-width: 640px){
+    .responsive {
+      width: 100%;
+      margin: 6px 0;
+    }
+        #sidebar {
+            border: none;
+            padding-right:0px;
+            padding-left:0px;
+        }
+        section {
+            padding: 0em;
+            padding-top: 4em;
+        }
+}
+@media only screen and (max-width: 1366px){
+    .responsive {
+      width: 100%;
+      margin: 6px 0;
+    }
+        #sidebar {
+            border: none;
+            padding-right:20px;
+            padding-left:20px;
+        }
+        section {
+            padding: 0px;
+            padding-top: 4em;
+        }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
