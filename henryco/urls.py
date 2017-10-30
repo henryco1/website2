@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home.views.homepage, name='homepage'),
     url(r'^contact/', contact.views.contact, name='contact'),
+    # url(r'^contact/success', contact.views.success, name='success'),
     url(r'^projects/', projects.views.projects, name='projects'),
     url(r'^images/', projects.views.projects, name='projects'),
 ]

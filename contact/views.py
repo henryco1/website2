@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 
+from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template import Context
@@ -33,9 +34,11 @@ def contact(request):
 							['henryco4388@gmail.com'], 
 							fail_silently=False
 							)
-
-            return redirect('contact')
+            return render(request, 'success.html')
 
     return render(request, 'contact.html', {
         'form': form_class,
     })
+
+# def success(request):
+#     return render(request, 'success.html')
