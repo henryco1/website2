@@ -23,6 +23,28 @@ p, h3 {
 [class*="col-"] {
     width: 100%;
 }
+
+label { display: block; }
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    width: 70%;
+    padding: 0 6px;
+    margin-right: 60px;
+}
+@media only screen and (max-width: 640px){
+    section {
+        padding: 0em;
+        padding-top: 4em;
+    }
+    body {
+        background: blue;
+    }
+}
+
 @media only screen and (min-width: 1368px) {
     /* For desktop: */
     .col-1 {width: 8.33%;}
@@ -37,66 +59,16 @@ p, h3 {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
-}
 
-#sidebar {
-    border-right: 1px solid #ddd;
-    padding-right:50px;
-    padding-left:50px;
-    /*position: fixed;*/
-}
-
-div.projectimg {
-    border: 1px solid #ccc;
-}
-
-div.projectimg img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.responsive {
-    padding: 0 6px;
-    margin-right: 60px;
-}
-@media only screen and (max-width: 640px){
-    .responsive {
-      width: 100%;
-      margin: 6px 0;
+    .row {
+        margin-left: 40%;
+        margin-right:40%;
     }
-        #sidebar {
-            border: none;
-            padding-right:0px;
-            padding-left:0px;
-        }
-        section {
-            padding: 0em;
-            padding-top: 4em;
-        }
-}
-@media only screen and (max-width: 1366px){
-    .responsive {
-      width: 100%;
-      margin: 6px 0;
+    body {
+        background: green;
     }
-        #sidebar {
-            border: none;
-            padding-right:20px;
-            padding-left:20px;
-        }
-        section {
-            padding: 0px;
-            padding-top: 4em;
-        }
 }
+
 
 .clearfix:after {
     content: "";
